@@ -1,0 +1,17 @@
+# robots.txt for https://homecares.sg/
+
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /login/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /account/
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+
+Disallow: /search
+Disallow: /*?*   
+
+Sitemap: https://homecares.sg/sitemap.xml
