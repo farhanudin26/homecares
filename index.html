@@ -19,7 +19,8 @@
     <meta property="og:description"
         content="Expert home cleaning in Singapore. Household Service Elite offers deep, steam, and regular maintenance cleaning.">
     <meta property="og:image"
-        content="https://homecares.sg/assets/images/HOME%20PAGE/Clean%20Space%20Happy%20Face%20home%20page%20image%20%28without%20button%20design%29.png">
+        content="https://cdn.jsdelivr.net/gh/farhanudin26/homecares@main/assets/images/HOME%20PAGE/Clean%20Space%20Happy%20Face%20home%20page%20image%20%28without%20button%20design%29.png">
+
     <meta property="og:url" content="https://homecares.sg/">
     <meta property="og:type" content="website">
     <meta property="og:image:width" content="1200">
@@ -30,15 +31,18 @@
     <meta name="twitter:description"
         content="Expert home cleaning in Singapore. Household Service Elite offers deep, steam, and regular maintenance cleaning.">
     <meta name="twitter:image"
-        content="https://homecares.sg/assets/images/HOME%20PAGE/Clean%20Space%20Happy%20Face%20home%20page%20image%20%28without%20button%20design%29.png">
+        content="https://cdn.jsdelivr.net/gh/farhanudin26/homecares@main/assets/images/HOME%20PAGE/Clean%20Space%20Happy%20Face%20home%20page%20image%20%28without%20button%20design%29.png">
+
     <meta name="theme-color" content="#f06224">
 
     <!-- Fav Icon -->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/farhanudin26/homecares@main/assets/images/favicon.ico"
+        type="image/x-icon">
 
     <!-- Preconnect untuk Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" as="style">
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2" as="font"
+        type="font/woff2" crossorigin>
 
     <!-- Google Fonts (swap agar tidak blocking) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Lato&family=Montserrat:wght@700&display=swap"
@@ -76,19 +80,33 @@
     </style>
 
     <!-- Non-critical CSS di-load async dengan media print trick -->
-    <link rel="stylesheet" href="assets/css/bootstrap.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="assets/css/font-awesome-all.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="assets/css/flaticon.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="assets/css/owl.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="assets/css/animate.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="assets/css/nice-select.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="assets/css/color.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="assets/css/responsive.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/farhanudin26/homecares@main/assets/css/bootstrap.css"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/farhanudin26/homecares@main/assets/css/font-awesome-all.css" media="print"
+        onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/farhanudin26/homecares@main/assets/css/flaticon.css"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/farhanudin26/homecares@main/assets/css/owl.css"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/farhanudin26/homecares@main/assets/css/jquery.fancybox.min.css" media="print"
+        onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/farhanudin26/homecares@main/assets/css/animate.css"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/farhanudin26/homecares@main/assets/css/nice-select.css"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/farhanudin26/homecares@main/assets/css/color.css"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/farhanudin26/homecares@main/assets/css/style.css"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/farhanudin26/homecares@main/assets/css/responsive.css"
+        media="print" onload="this.media='all'">
 
     <!-- Preload image penting -->
-    <link rel="preload" as="image" href="assets/images/banner/TESTIMONIAL BG.jpg" fetchpriority="high">
+    <link rel="preload" as="image"
+        href="https://cdn.jsdelivr.net/gh/farhanudin26/homecares@main/assets/images/banner/TESTIMONIAL%20BG.jpg"
+        fetchpriority="high">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P814H2WE01"></script>
@@ -109,20 +127,18 @@
         })(window, document, 'script', 'dataLayer', 'GTM-MHF3CPXV');
     </script>
 
-    <!-- ✅ CDN JS dengan defer -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
+    <!-- ✅ CDN JS via jsDelivr -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-appear/0.1/jquery.appear.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"
-        defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
-        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-appear-original@0.1.0/jquery.appear.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-countto@1.2.0/jquery.countTo.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.nicescroll@3.7.6/dist/jquery.nicescroll.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-nice-select@1.1.0/js/jquery.nice-select.min.js" defer></script>
 
 
     <!-- Inline CSS kecil (non-blocking) -->
@@ -229,22 +245,21 @@
 </head>
 
 
-
-<!-- Tombol WhatsApp Custom -->
-<a href="https://api.whatsapp.com/send/?phone=6588112999&text&type=phone_number&app_absent=0" class="d-only"
-    id="whatsapp-desktop" target="_blank" rel="noopener noreferrer">
+<!-- Tombol WhatsApp Desktop & Mobile -->
+<a href="https://api.whatsapp.com/send/?phone=6588112999" id="whatsapp-desktop" target="_blank"
+    rel="noopener noreferrer">
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
     <span class="wa-text">Chat via WhatsApp</span>
 </a>
 
-<a href="https://api.whatsapp.com/send/?phone=6588112999&text&type=phone_number&app_absent=0" class="m-only"
-    id="whatsapp-mobile" target="_blank" rel="noopener noreferrer">
+<a href="https://api.whatsapp.com/send/?phone=6588112999" id="whatsapp-mobile" target="_blank"
+    rel="noopener noreferrer">
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
     <span class="wa-text mobile">Chat here</span>
 </a>
 
+
 <style>
-    /* Tombol umum */
     #whatsapp-desktop,
     #whatsapp-mobile {
         position: fixed;
@@ -259,7 +274,7 @@
         text-decoration: none;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         z-index: 9999;
-        transition: background-color 0.3s ease;
+        transition: background-color .3s ease;
         display: flex;
         align-items: center;
         gap: 6px;
@@ -271,8 +286,7 @@
         background-color: black;
     }
 
-    /* Mobile only */
-    @media (max-width: 767px) {
+    @media (max-width:767px) {
         #whatsapp-desktop {
             display: none;
         }
@@ -287,8 +301,7 @@
         }
     }
 
-    /* Desktop only */
-    @media (min-width: 768px) {
+    @media (min-width:768px) {
         #whatsapp-mobile {
             display: none;
         }
@@ -619,7 +632,7 @@
                     srcset="assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design).webp"
                     type="image/webp">
                 <!-- Optimized PNG fallback -->
-                <img src="assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design).png"
+                <img src="assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design).webp"
                     alt="Happy family smiling after professional home cleaning in Singapore" width="1400" height="800"
                     loading="eager" decoding="async" fetchpriority="high" style="max-width:100%;height:auto;">
             </picture>
@@ -642,8 +655,8 @@
                 <source
                     srcset="assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design)_mobile.webp"
                     type="image/webp">
-                <!-- Fallback PNG -->
-                <img src="assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design)_mobile.png"
+                <!-- Fallback webp -->
+                <img src="assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design)_mobile.webp"
                     alt="Clean and fresh home after cleaning service in Singapore" style="max-width:100%;height:auto;"
                     loading="lazy" decoding="async">
             </picture>
@@ -849,7 +862,7 @@
                                     style="display: inline-block; vertical-align: middle; text-align: center; margin: 0 8px;">
                                     <div class="stat-line"></div>
                                     <span id="years" data-target="7" class="stat-number"
-                                        style="color:#f06224; font-size: 72px; font-weight: 900; -webkit-text-stroke: 2px #f5efe3; text-stroke: 1px #f5efe3; text-shadow: 1px 1px 0 #b94a1f, -1px -1px 0 #b94a1f; display: inline-block;">0</span>
+                                        style="color:#f06224; font-size: 72px; font-weight: 900; -webkit-text-stroke: 2px #f5efe3; text-shadow: 1px 1px 0 #b94a1f, -1px -1px 0 #b94a1f; display: inline-block;">0</span>
                                 </span>
                                 YEARS OF<br> EXPERIENCE
                             </h3>
@@ -870,7 +883,6 @@
         font-size: 72px;
         font-weight: 900;
         -webkit-text-stroke: 2px #f5efe3;
-        text-stroke: 1px #f5efe3;
         text-shadow: 1px 1px 0 #b94a1f, -1px -1px 0 #b94a1f;
         display: inline-block;
         text-align: right;
@@ -956,7 +968,7 @@
                                     style="display: inline-block; vertical-align: middle; text-align: center; margin: 0 8px;">
                                     <div class="stat-line"></div>
                                     <span id="yearsm" data-target="7" class="stat-number"
-                                        style="color:#f06224; font-size: 72px; font-weight: 900; -webkit-text-stroke: 2px #f5efe3; text-stroke: 1px #f5efe3; text-shadow: 1px 1px 0 #b94a1f, -1px -1px 0 #b94a1f; display: inline-block;">0</span>
+                                        style="color:#f06224; font-size: 72px; font-weight: 900; -webkit-text-stroke: 2px #f5efe3; text-shadow: 1px 1px 0 #b94a1f, -1px -1px 0 #b94a1f; display: inline-block;">0</span>
                                 </span>
                                 YEARS OF<br> EXPERIENCE
                             </h3>
@@ -977,7 +989,6 @@
         font-size: 72px;
         font-weight: 900;
         -webkit-text-stroke: 2px #f5efe3;
-        text-stroke: 1px #f5efe3;
         text-shadow: 1px 1px 0 #b94a1f, -1px -1px 0 #b94a1f;
         display: inline-block;
         text-align: right;
@@ -1094,26 +1105,43 @@
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
                             <a href="https://www.instagram.com/reel/DMzFgulydgV/?igsh=MXQzNXBiNnZhN2VnNg=="
-                                target="_blank" rel="noopener noreferrer"><img
-                                    src="assets/images/special promo sg60 banner.png" alt="SG60 Promo" class="img-fluid"
-                                    style="width: 100%; border-radius: 10px;" loading="lazy">
+                                target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <!-- versi modern WebP -->
+                                    <source type="image/webp" srcset="assets/images/special promo sg60 banner.webp">
+                                    <!-- fallback PNG -->
+                                    <img src="assets/images/special promo sg60 banner.webp" alt="SG60 Promo"
+                                        class="img-fluid" style="width: 100%; border-radius: 10px;" loading="lazy">
+                                </picture>
+                            </a>
                         </div>
+
                         <!-- Slide 1 -->
-                        <div class="swiper-slide"><a href="https://homecares.sg/weekly-cleaning.html" target="_blank"
+                        <div class="swiper-slide">
+                            <a href="https://homecares.sg/weekly-cleaning.html" target="_blank"
                                 rel="noopener noreferrer">
-                                <img src="assets/images/HSE REGULAR CLEANING PROMO BANNER.png"
-                                    alt="Regular Cleaning Promo" class="img-fluid"
-                                    style="width: 100%; border-radius: 10px;" loading="lazy"></a>
+                                <picture>
+                                    <source type="image/webp"
+                                        srcset="assets/images/HSE REGULAR CLEANING PROMO BANNER.webp">
+                                    <img src="assets/images/HSE REGULAR CLEANING PROMO BANNER.webp"
+                                        alt="Regular Cleaning Promo" class="img-fluid"
+                                        style="width: 100%; border-radius: 10px;" loading="lazy">
+                                </picture>
+                            </a>
                         </div>
+
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
                             <a href="https://homecares.sg/nursery-room-cleaning.html" target="_blank"
-                                rel="noopener noreferrer"><img src="assets/images/nursery room cleaning.png"
-                                    alt="Nursery Room Cleaning" class="img-fluid"
-                                    style="width: 100%; border-radius: 10px;" loading="lazy"></a>
+                                rel="noopener noreferrer">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/images/nursery room cleaning.webp">
+                                    <img src="assets/images/nursery room cleaning.webp" alt="Nursery Room Cleaning"
+                                        class="img-fluid" style="width: 100%; border-radius: 10px;" loading="lazy">
+                                </picture>
+                            </a>
                         </div>
                     </div>
-
                     <!-- Navigasi panah -->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
@@ -1154,56 +1182,95 @@
                         available curated for your needs</span></h3>
                 </div>
                 <div class="three-item-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
+
                     <div class="testimonial-block-two tris">
                         <a href="nursery-room-cleaning.html">
-                            <img src="assets/images/HOME PAGE/Home page - baby room cleaning service.png"
-                                alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="assets/images/HOME PAGE/Home page - baby room cleaning service.webp">
+                                <img src="assets/images/HOME PAGE/Home page - baby room cleaning service.webp"
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                            </picture>
                         </a>
                     </div>
+
                     <div class="testimonial-block-two tris">
                         <a href="deep-cleaning.html">
-                            <img src="assets/images/HOME PAGE/Home page - Deep Cleaning Service.png" alt="Happy Face"
-                                style="max-width: 100%; height: auto;" loading="lazy">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="assets/images/HOME PAGE/Home page - Deep Cleaning Service.webp">
+                                <img src="assets/images/HOME PAGE/Home page - Deep Cleaning Service.webp"
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                            </picture>
                         </a>
                     </div>
+
                     <div class="testimonial-block-two tris">
                         <a href="hip-cleaning.html">
-                            <img src="assets/images/HOME PAGE/Home page - HIP Programme Service.png" alt="Happy Face"
-                                style="max-width: 100%; height: auto;" loading="lazy">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="assets/images/HOME PAGE/Home page - HIP Programme Service.webp">
+                                <img src="assets/images/HOME PAGE/Home page - HIP Programme Service.webp"
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                            </picture>
                         </a>
                     </div>
+
                     <div class="testimonial-block-two tris">
                         <a href="moving-out-cleaning.html">
-                            <img src="assets/images/HOME PAGE/Home page - Moving Out Cleaning service.png"
-                                alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="assets/images/HOME PAGE/Home page - Moving Out Cleaning service.webp">
+                                <img src="assets/images/HOME PAGE/Home page - Moving Out Cleaning service.webp"
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                            </picture>
                         </a>
                     </div>
+
                     <div class="testimonial-block-two tris">
                         <a href="moving-in-cleaning.html">
-                            <img src="assets/images/HOME PAGE/Home page - Post-Reno Cleaning Service .png"
-                                alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="assets/images/HOME PAGE/Home page - Post-Reno Cleaning Service .webp">
+                                <img src="assets/images/HOME PAGE/Home page - Post-Reno Cleaning Service .webp"
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                            </picture>
                         </a>
                     </div>
+
                     <div class="testimonial-block-two tris">
                         <a href="spring-cleaning.html">
-                            <img src="assets/images/HOME PAGE/Home page - Spring Cleaning Service.png" alt="Happy Face"
-                                style="max-width: 100%; height: auto;" loading="lazy">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="assets/images/HOME PAGE/Home page - Spring Cleaning Service.webp">
+                                <img src="assets/images/HOME PAGE/Home page - Spring Cleaning Service.webp"
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                            </picture>
                         </a>
                     </div>
+
                     <div class="testimonial-block-two tris">
                         <a href="steam-cleaning.html">
-                            <img src="assets/images/HOME PAGE/Home page - Steam Cleaning Services.png" alt="Happy Face"
-                                style="max-width: 100%; height: auto;" loading="lazy">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="assets/images/HOME PAGE/Home page - Steam Cleaning Services.webp">
+                                <img src="assets/images/HOME PAGE/Home page - Steam Cleaning Services.webp"
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                            </picture>
                         </a>
                     </div>
+
                     <div class="testimonial-block-two tris">
                         <a href="weekly-cleaning.html">
-                            <img src="assets/images/HOME PAGE/Home page - Weekly Cleaning Service.png" alt="Happy Face"
-                                style="max-width: 100%; height: auto;" loading="lazy">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="assets/images/HOME PAGE/Home page - Weekly Cleaning Service.webp">
+                                <img src="assets/images/HOME PAGE/Home page - Weekly Cleaning Service.webp"
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                            </picture>
                         </a>
                     </div>
                 </div>
-
             </div>
         </section>
         <!-- testimonial-style-three end -->
