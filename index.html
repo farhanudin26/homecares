@@ -551,14 +551,23 @@
                     <ul>
                         <li>18 Sin Ming Lane, #06-27, Midview City, Singapore 573960</li>
                         <li><a href="tel:+6588112999">8811 2999</a></li>
-                        <li>
-                            <script type="text/javascript">
-                                // Email obfuscation
+                        <li id="email-container"></li>
+
+                        <script type="text/javascript">
+                            // Email obfuscation tanpa document.write
+                            (function () {
                                 var user = "hello";
                                 var domain = "homecares.sg";
-                                document.write('<a href="mailto:' + user + '@' + domain + '">' + user + '@' + domain + '</a>');
-                            </script>
-                        </li>
+                                var email = user + "@" + domain;
+
+                                var link = document.createElement("a");
+                                link.href = "mailto:" + email;
+                                link.textContent = email;
+
+                                document.getElementById("email-container").appendChild(link);
+                            })();
+                        </script>
+
                     </ul>
                 </div>
                 <div class="social-links">
@@ -652,7 +661,8 @@
                 <!-- Fallback PNG -->
                 <img src="assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design).webp"
                     alt="Happy family smiling after professional home cleaning in Singapore" loading="eager"
-                    decoding="async" fetchpriority="high" style="max-width:100%;height:auto;">
+                    width="3468" height="1696" decoding="async" fetchpriority="high"
+                    style="max-width:100%;height:auto;">
             </picture>
 
             <button class="button-on-image" onclick="openPopups()">
@@ -1212,7 +1222,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - baby room cleaning service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - baby room cleaning service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
+                                    height="3420">
                             </picture>
                         </a>
                     </div>
@@ -1223,7 +1234,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Deep Cleaning Service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Deep Cleaning Service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
+                                    height="3420">
                             </picture>
                         </a>
                     </div>
@@ -1234,7 +1246,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - HIP Programme Service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - HIP Programme Service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
+                                    height="3420">
                             </picture>
                         </a>
                     </div>
@@ -1245,7 +1258,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Moving Out Cleaning service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Moving Out Cleaning service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
+                                    height="3420">
                             </picture>
                         </a>
                     </div>
@@ -1256,7 +1270,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Post-Reno Cleaning Service .webp">
                                 <img src="assets/images/HOME PAGE/Home page - Post-Reno Cleaning Service .webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
+                                    height="3420">
                             </picture>
                         </a>
                     </div>
@@ -1267,7 +1282,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Spring Cleaning Service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Spring Cleaning Service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
+                                    height="3420">
                             </picture>
                         </a>
                     </div>
@@ -1278,7 +1294,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Steam Cleaning Services.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Steam Cleaning Services.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
+                                    height="3420">
                             </picture>
                         </a>
                     </div>
@@ -1289,7 +1306,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Weekly Cleaning Service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Weekly Cleaning Service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
+                                    height="3420">
                             </picture>
                         </a>
                     </div>
@@ -1638,8 +1656,8 @@
 
 
         <!--Scroll to top-->
-        <button class="scroll-top scroll-to-target" data-target="html">
-            <span class="flaticon-up-arrow"></span>
+        <button class="scroll-top scroll-to-target" data-target="html" aria-label="Scroll to top">
+            <span class="flaticon-up-arrow" aria-hidden="true"></span>
         </button>
     </div>
 
