@@ -3,55 +3,75 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Page Not Found - Household Service Elite</title>
-  <meta name="robots" content="noindex">
+  <title>404 Page Not Found | Household Service Elite</title>
+  <meta name="description" content="The page you’re looking for is not available. Return to Household Service Elite’s homepage and explore our cleaning services in Singapore.">
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="404 Page Not Found | Household Service Elite">
+  <meta property="og:description" content="Oops! The page you’re looking for doesn’t exist. Go back to our homepage to discover cleaning services in Singapore.">
+  <meta property="og:url" content="https://homecares.sg/404.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://homecares.sg/assets/images/404-error.png">
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-P814H2WE01"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-P814H2WE01');
   </script>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       margin: 0;
-      background: #f9f9f9;
+      background: linear-gradient(135deg, #f9f9f9, #fff5eb);
     }
 
     .container {
       background: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      border: 3px solid #f77f00;
-      /* border oren */
-      max-width: 500px;
+      padding: 50px 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
       text-align: center;
+      max-width: 600px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
 
     .emoji {
-      font-size: 60px;
+      font-size: 70px;
       margin-bottom: 15px;
       color: #f77f00;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     h1 {
-      font-size: 80px;
+      font-size: 100px;
+      font-weight: 800;
+      margin: 10px 0;
       color: #e63946;
-      margin-bottom: 10px;
       position: relative;
     }
 
     h1::after {
       content: "";
-      width: 60px;
+      width: 80px;
       height: 5px;
       background: #f77f00;
       display: block;
@@ -63,25 +83,27 @@
       font-size: 20px;
       margin: 20px 0;
       color: #444;
+      line-height: 1.6;
     }
 
     a {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
+      margin-top: 25px;
+      padding: 14px 35px;
       background: #1d3557;
       color: #fff;
       text-decoration: none;
-      border-radius: 6px;
-      font-size: 16px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 600;
       transition: all 0.3s ease;
       border: 2px solid transparent;
     }
 
     a:hover {
       background: #f77f00;
-      color: #fff;
       border-color: #f77f00;
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -90,8 +112,8 @@
   <div class="container">
     <div class="emoji">😕</div>
     <h1>404</h1>
-    <p>Oops! The page you’re looking for doesn’t exist.</p>
-    <a href="https://homecares.sg/">Go Back to Home</a>
+    <p>Oops! The page you’re looking for doesn’t exist or has been moved.</p>
+    <a href="https://homecares.sg/">⬅ Back to Home</a>
   </div>
 </body>
 
