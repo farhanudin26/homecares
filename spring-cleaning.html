@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-SG">
 
 <head>
   <meta charset="utf-8">
@@ -10,9 +10,16 @@
   <meta name="description"
     content="Professional spring cleaning service in Singapore to refresh, sanitize, and deep clean your home. Ideal for festive seasons, yearly refresh, or a healthy fresh start for your family." />
   <meta name="keywords"
-    content="spring cleaning service, professional spring cleaning, seasonal deep cleaning, house spring cleaning">
+    content="spring cleaning Singapore, professional spring cleaning SG, seasonal deep cleaning Singapore, HDB spring cleaning service, condo spring cleaning service, landed house spring cleaning, Household Service Elite, HSE spring cleaning, trusted home cleaners Singapore">
   <link rel="canonical" href="https://homecares.sg/spring-cleaning.html">
   <link rel="alternate" hreflang="en-sg" href="https://homecares.sg/spring-cleaning.html" />
+  <meta name="geo.region" content="SG">
+  <meta name="geo.placename" content="Singapore">
+  <meta name="geo.position" content="1.3585108;103.8340317">
+  <meta name="ICBM" content="1.3585108,103.8340317">
+  <meta http-equiv="Content-Language" content="en-SG">
+  <meta name="author" content="Household Service Elite Singapore">
+  <meta name="publisher" content="Household Service Elite Singapore">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Spring Cleaning Service in Singapore - HSE Singapore">
@@ -22,6 +29,8 @@
     content="https://homecares.sg/assets/images/INDIVIDUAL%20SERVICE%20HEADER%20IMAGE/Individual%20Service%20-%20Spring%20Cleaning%20Service%20Head%20Image.png">
   <meta property="og:url" content="https://homecares.sg/spring-cleaning.html">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_SG">
+  <meta property="og:site_name" content="Household Service Elite Singapore">
 
   <!-- Fav Icon -->
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
@@ -128,44 +137,76 @@
   </style>
 
   <!-- Service Schema Markup JSON-LD -->
+  <!-- Service Schema Markup JSON-LD -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Spring Cleaning Service",
-  "provider": {
-    "@type": "Organization",
-    "name": "Household Service Elite",
-    "url": "https://homecares.sg",
-    "logo": "https://homecares.sg/assets/images/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+65-8811-2999",
-      "contactType": "customer service",
-      "areaServed": "SG",
-      "availableLanguage": "English"
-    }
-  },
-  "url": "https://homecares.sg/spring-cleaning.html",
-  "description": "Professional spring cleaning service in Singapore to refresh and deep clean your home. Perfect for festive seasons or a fresh start.",
-  "serviceType": "Spring Cleaning",
-  "areaServed": {
-    "@type": "Place",
-    "name": "Singapore"
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": "https://homecares.sg/spring-cleaning.html",
-    "priceCurrency": "SGD",
-    "price": "0.00",
-    "eligibleRegion": {
-      "@type": "Country",
-      "name": "Singapore"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Household Service Elite",
+      "url": "https://homecares.sg",
+      "logo": "https://homecares.sg/assets/images/logo-2.png",
+      "description": "Household Service Elite provides professional cleaning services in Singapore, including spring cleaning, deep cleaning, HIP cleaning, and steam cleaning by trained experts.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "18 Sin Ming Lane, #06-27, Midview City",
+        "addressLocality": "Singapore",
+        "postalCode": "573960",
+        "addressCountry": "SG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "1.3585108",
+        "longitude": "103.8340317"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+65-8811-2999",
+          "contactType": "customer service",
+          "areaServed": "SG",
+          "availableLanguage": ["English", "Indonesian"]
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61564643353118",
+        "https://www.instagram.com/hse_singapore",
+        "https://api.whatsapp.com/send/?phone=6588112999&text&type=phone_number&app_absent=0"
+      ]
     },
-    "availability": "https://schema.org/InStock"
-  }
+    {
+      "@type": "Service",
+      "name": "Spring Cleaning Service",
+      "serviceType": "Spring Cleaning",
+      "provider": {
+        "@type": "Organization",
+        "name": "Household Service Elite",
+        "url": "https://homecares.sg"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Singapore"
+      },
+      "url": "https://homecares.sg/spring-cleaning.html",
+      "description": "Professional spring cleaning service in Singapore to refresh, sanitize, and deep clean your home. Ideal for festive seasons, yearly refresh, or a healthy fresh start for your family.",
+      "category": "Home Cleaning",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://homecares.sg/spring-cleaning.html",
+        "priceCurrency": "SGD",
+        "price": "Contact for Quote",
+        "availability": "https://schema.org/InStock",
+        "eligibleRegion": {
+          "@type": "Country",
+          "name": "Singapore"
+        }
+      }
+    }
+  ]
 }
 </script>
+
 
 </head>
 

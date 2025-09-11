@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-SG">
 
 <head>
     <meta charset="utf-8">
@@ -10,9 +10,13 @@
     <meta name="description"
         content="Learn more about Household Service Elite (HSE), Singapore’s trusted home cleaning company. We are committed to excellence with professional cleaners and dedicated customer service.">
     <meta name="keywords"
-        content="Household Service Elite, HSE Singapore, about HSE, Singapore cleaning company, professional cleaners">
+        content="Household Service Elite, HSE Singapore, about HSE, Singapore cleaning company, professional home cleaners Singapore, trusted home cleaning Singapore, HDB cleaning service Singapore, condo cleaning service SG, landed house cleaning Singapore, HSE story">
     <link rel="canonical" href="https://homecares.sg/about.html">
     <link rel="alternate" hreflang="en-sg" href="https://homecares.sg/about.html" />
+    <meta name="geo.region" content="SG">
+    <meta name="geo.placename" content="Singapore">
+    <meta name="geo.position" content="1.3585108;103.8340317">
+    <meta name="ICBM" content="1.3585108,103.8340317">
 
     <!-- Open Graph (Social Media) -->
     <meta property="og:title" content="About Household Service Elite | HSE Singapore">
@@ -22,6 +26,8 @@
         content="https://homecares.sg/assets/images/INDIVIDUAL%20SERVICE%20HEADER%20IMAGE/etc/ABOUT%20US%20HEADER_mobile.png">
     <meta property="og:url" content="https://homecares.sg/about.html">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_SG">
+    <meta property="og:site_name" content="Household Service Elite Singapore">
 
     <!-- Fav Icon -->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
@@ -121,55 +127,71 @@
     </style>
     <!-- Schema Markup JSON-LD for About Page -->
     <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "name": "Household Service Elite",
-        "url": "https://homecares.sg",
-        "logo": "https://homecares.sg/assets/images/logo-2.png",
-        "description": "Household Service Elite is Singapore’s trusted provider of professional home cleaning services with experienced and dedicated staff.",
-        "foundingDate": "2023",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "18 Sin Ming Lane, #06-27, Midview City",
-          "addressLocality": "Singapore",
-          "postalCode": "573960",
-          "addressCountry": "SG"
-        },
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+65-8811-2999",
-            "contactType": "customer service",
-            "areaServed": "SG",
-            "availableLanguage": ["English", "Indonesian"]
-          }
-        ],
-        "sameAs": [
-          "https://www.facebook.com/profile.php?id=61564643353118",
-          "https://www.instagram.com/hse_singapore",
-          "https://api.whatsapp.com/send/?phone=6588112999&text&type=phone_number&app_absent=0"
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Household Service Elite",
+      "url": "https://homecares.sg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://homecares.sg/assets/images/logo-2.png"
       },
-      {
+      "description": "Household Service Elite is Singapore’s trusted provider of professional home cleaning services with experienced and dedicated staff.",
+      "foundingDate": "2023",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "18 Sin Ming Lane, #06-27, Midview City",
+        "addressLocality": "Singapore",
+        "postalCode": "573960",
+        "addressCountry": "SG"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+65-8811-2999",
+          "contactType": "customer service",
+          "areaServed": "SG",
+          "availableLanguage": ["English", "Indonesian"]
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61564643353118",
+        "https://www.instagram.com/hse_singapore",
+        "https://api.whatsapp.com/send/?phone=6588112999&text&type=phone_number&app_absent=0"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://homecares.sg",
+      "name": "Household Service Elite",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Household Service Elite"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://homecares.sg/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://homecares.sg/about.html",
+      "name": "About Household Service Elite | HSE Singapore",
+      "description": "Learn more about Household Service Elite (HSE), Singapore’s trusted home cleaning company. We are committed to excellence with professional cleaners and dedicated customer service.",
+      "inLanguage": "en-SG",
+      "isPartOf": {
         "@type": "WebSite",
         "url": "https://homecares.sg",
-        "name": "Household Service Elite",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Household Service Elite"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://homecares.sg/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "name": "Household Service Elite"
       }
-    ]
-  }
-  </script>
+    }
+  ]
+}
+</script>
+
 </head>
 
 <!-- Tombol WhatsApp Custom -->

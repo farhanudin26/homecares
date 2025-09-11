@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-SG">
 
 <head>
   <meta charset="utf-8">
@@ -10,9 +10,16 @@
   <meta name="description"
     content="Professional moving-out cleaning service in Singapore. Household Service Elite ensures your old home is spotless, sanitized, and ready for the next occupant—meeting all tenancy handover requirements.">
   <meta name="keywords"
-    content="moving out cleaning, professional move out cleaning, move out deep cleaning, Household Service Elite">
+    content="moving out cleaning Singapore, move out cleaning SG, professional moving out cleaning Singapore, HDB moving out cleaning, condo moving out cleaning service, landed house move out cleaning, Household Service Elite, HSE moving out cleaning, trusted home cleaners Singapore">
   <link rel="canonical" href="https://homecares.sg/moving-out-cleaning.html">
   <link rel="alternate" hreflang="en-sg" href="https://homecares.sg/moving-out-cleaning.html" />
+  <meta name="geo.region" content="SG">
+  <meta name="geo.placename" content="Singapore">
+  <meta name="geo.position" content="1.3585108;103.8340317">
+  <meta name="ICBM" content="1.3585108,103.8340317">
+  <meta http-equiv="Content-Language" content="en-SG">
+  <meta name="author" content="Household Service Elite Singapore">
+  <meta name="publisher" content="Household Service Elite Singapore">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Moving Out Cleaning Singapore | Household Service Elite">
@@ -135,43 +142,72 @@
   </style>
   <!-- Service Schema Markup JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Moving Out Cleaning Service",
-    "provider": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
       "@type": "Organization",
       "name": "Household Service Elite",
       "url": "https://homecares.sg",
-      "logo": "https://homecares.sg/assets/images/logo.png",
+      "logo": "https://homecares.sg/assets/images/logo-2.png",
+      "description": "Household Service Elite provides professional cleaning services in Singapore, including moving out cleaning, moving in cleaning, deep cleaning, and post-renovation cleaning by trained experts.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "18 Sin Ming Lane, #06-27, Midview City",
+        "addressLocality": "Singapore",
+        "postalCode": "573960",
+        "addressCountry": "SG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 1.3585108,
+        "longitude": 103.8340317
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+65-8811-2999",
         "contactType": "customer service",
         "areaServed": "SG",
-        "availableLanguage": "English"
-      }
+        "availableLanguage": ["English", "Indonesian"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61564643353118",
+        "https://www.instagram.com/hse_singapore",
+        "https://api.whatsapp.com/send/?phone=6588112999&text&type=phone_number&app_absent=0"
+      ]
     },
-    "url": "https://homecares.sg/moving-out-cleaning.html",
-    "description": "Professional moving-out cleaning service in Singapore. Household Service Elite ensures your old home is spotless, sanitized, and ready for the next occupant—meeting all tenancy handover requirements.",
-    "serviceType": "Move Out Cleaning",
-    "areaServed": {
-      "@type": "Place",
-      "name": "Singapore"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://homecares.sg/moving-out-cleaning.html",
-      "priceCurrency": "SGD",
-      "price": "0.00",
-      "eligibleRegion": {
-        "@type": "Country",
+    {
+      "@type": "Service",
+      "serviceType": "Moving Out Cleaning",
+      "provider": {
+        "@type": "Organization",
+        "name": "Household Service Elite",
+        "url": "https://homecares.sg"
+      },
+      "areaServed": {
+        "@type": "Place",
         "name": "Singapore"
       },
-      "availability": "https://schema.org/InStock"
+      "url": "https://homecares.sg/moving-out-cleaning.html",
+      "description": "Professional moving-out cleaning service in Singapore. Household Service Elite ensures your old home is spotless, sanitized, and ready for the next occupant—meeting all tenancy handover requirements.",
+      "category": "Home Cleaning",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://homecares.sg/moving-out-cleaning.html",
+        "priceCurrency": "SGD",
+        "price": "0",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "Contact for Quote",
+          "priceCurrency": "SGD"
+        },
+        "availability": "https://schema.org/InStock"
+      }
     }
-  }
-  </script>
+  ]
+}
+</script>
+
 
 </head>
 
