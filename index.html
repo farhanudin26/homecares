@@ -58,9 +58,12 @@
     <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2" as="font"
         type="font/woff2" crossorigin>
 
-    <link rel="preload" as="image"
-        href="assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design).webp"
-        fetchpriority="high" type="image/webp">
+    <link rel="preload" as="image" href="assets/images/HOME PAGE/clean-space-happy-face-home-page-1400.avif"
+        type="image/avif" imagesrcset="
+        assets/images/HOME PAGE/clean-space-happy-face-home-page-800.avif 800w,
+        assets/images/HOME PAGE/clean-space-happy-face-home-page-1400.avif 1400w,
+        assets/images/HOME PAGE/clean-space-happy-face-home-page-1920.avif 1920w"
+        imagesizes="(max-width: 768px) 100vw, 1400px">
     <!-- Google Fonts (swap agar tidak blocking) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Lato&family=Montserrat:wght@700&display=swap"
         rel="stylesheet">
@@ -126,28 +129,39 @@
         fetchpriority="high">
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P814H2WE01"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', 'G-P814H2WE01');
+
+        window.addEventListener("load", function () {
+            var gtagScript = document.createElement("script");
+            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-P814H2WE01";
+            gtagScript.async = true;
+            document.head.appendChild(gtagScript);
+
+            gtag('config', 'G-P814H2WE01');
+        });
     </script>
 
-    <!-- Google Tag Manager -->
+
+    <!-- Google Tag Manager (deferred) -->
     <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-MHF3CPXV');
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+
+        window.addEventListener("load", function () {
+            var gtmScript = document.createElement("script");
+            gtmScript.src = "https://www.googletagmanager.com/gtm.js?id=GTM-MHF3CPXV";
+            gtmScript.async = true;
+            document.head.appendChild(gtmScript);
+        });
     </script>
+
 
     <!-- ✅ CDN JS via jsDelivr -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js" defer></script>
@@ -229,13 +243,13 @@
         }
     </style>
 
-<!-- Schema Markup JSON-LD -->
-<script type="application/ld+json">
+    <!-- Schema Markup JSON-LD -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "CleaningService"],
   "name": "Household Service Elite",
-  "image": "https://homecares.sg/assets/images/logo-2.png",
+  "image": "https://homecares.sg/assets/images/logo-2.webp",
   "url": "https://homecares.sg",
   "telephone": "+65 8811 2999",
   "address": {
@@ -450,8 +464,9 @@
 
                             <!-- Gambar logo-2 tetap di bawah -->
                             <div class="txt-loading" style="margin-top: 15px;">
-                                <img src="assets/images/logo-2.png" alt="Logo" class="logo-bawah" width="200"
-                                    height="80" fetchpriority="high" decoding="async">
+                                <img src="assets/images/logo-2.webp" alt="Logo" class="logo-bawah" width="200"
+                                    height="80" fetchpriority="high" decoding="async" loading="eager">
+
                             </div>
                         </div>
 
@@ -514,7 +529,8 @@
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
                                         <li class=""><a href="index.html"><img style="max-width: 100px;"
-                                                    src="assets/images/logo-2.png" alt="logo-2" loading="lazy"></a>
+                                                    src="assets/images/logo-2.webp" alt="logo-2" loading="lazy"
+                                                    width="500" height="275"></a>
                                         </li>
                                         <li style="padding-top: 20px;" class="current"><a href="index.html">HOME</a>
                                         </li>
@@ -576,8 +592,8 @@
             <div class="close-btn"><i class="fas fa-times"></i></div>
 
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-2.png" alt="logo-2" title=""
-                            loading="lazy"></a></div>
+                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-2.webp" alt="logo-2" title=""
+                            width="500" height="275" loading="lazy"></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
                 </div>
                 <div class="contact-info">
@@ -682,20 +698,24 @@
             </p>
 
             <picture>
-                <!-- AVIF responsive -->
+                <!-- AVIF -->
                 <source srcset="
-            assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design).avif 800w,
-            assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design).avif 1400w"
-                    type="image/avif" sizes="(max-width: 768px) 100vw, 1400px">
-                <!-- WebP responsive -->
+            assets/images/HOME PAGE/clean-space-happy-face-home-page-800.avif 800w,
+            assets/images/HOME PAGE/clean-space-happy-face-home-page-1400.avif 1400w,
+            assets/images/HOME PAGE/clean-space-happy-face-home-page-1920.avif 1920w" type="image/avif"
+                    sizes="(max-width: 768px) 100vw, 1400px">
+
+                <!-- WebP fallback -->
                 <source srcset="
-            assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design).webp 800w,
-            assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design).webp 1400w"
-                    type="image/webp" sizes="(max-width: 768px) 100vw, 1400px">
+            assets/images/HOME PAGE/clean-space-happy-face-home-page-800.webp 800w,
+            assets/images/HOME PAGE/clean-space-happy-face-home-page-1400.webp 1400w,
+            assets/images/HOME PAGE/clean-space-happy-face-home-page-1920.webp 1920w" type="image/webp"
+                    sizes="(max-width: 768px) 100vw, 1400px">
+
                 <!-- Fallback PNG -->
                 <img src="assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design).webp"
                     alt="Happy family smiling after professional home cleaning in Singapore" loading="eager"
-                    width="3468" height="1696" decoding="async" fetchpriority="high"
+                    width="1920" height="1080" decoding="async" fetchpriority="high"
                     style="max-width:100%;height:auto;">
             </picture>
 
@@ -1178,7 +1198,8 @@
                                     <source type="image/webp" srcset="assets/images/special promo sg60 banner.webp">
                                     <!-- fallback PNG -->
                                     <img src="assets/images/special promo sg60 banner.webp" alt="SG60 Promo"
-                                        class="img-fluid" style="width: 100%; border-radius: 10px;" loading="lazy">
+                                        class="img-fluid" style="width: 100%; border-radius: 10px;" loading="lazy"
+                                        width="1920" height="1080">
                                 </picture>
                             </a>
                         </div>
@@ -1192,7 +1213,8 @@
                                         srcset="assets/images/HSE REGULAR CLEANING PROMO BANNER.webp">
                                     <img src="assets/images/HSE REGULAR CLEANING PROMO BANNER.webp"
                                         alt="Regular Cleaning Promo" class="img-fluid"
-                                        style="width: 100%; border-radius: 10px;" loading="lazy">
+                                        style="width: 100%; border-radius: 10px;" loading="lazy" width="1920"
+                                        height="1080">
                                 </picture>
                             </a>
                         </div>
@@ -1204,7 +1226,8 @@
                                 <picture>
                                     <source type="image/webp" srcset="assets/images/nursery room cleaning.webp">
                                     <img src="assets/images/nursery room cleaning.webp" alt="Nursery Room Cleaning"
-                                        class="img-fluid" style="width: 100%; border-radius: 10px;" loading="lazy">
+                                        class="img-fluid" style="width: 100%; border-radius: 10px;" loading="lazy"
+                                        width="1920" height="1080">
                                 </picture>
                             </a>
                         </div>
@@ -1256,8 +1279,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - baby room cleaning service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - baby room cleaning service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
-                                    height="3420">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
+                                    height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1268,8 +1291,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Deep Cleaning Service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Deep Cleaning Service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
-                                    height="3420">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
+                                    height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1280,8 +1303,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - HIP Programme Service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - HIP Programme Service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
-                                    height="3420">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
+                                    height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1292,8 +1315,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Moving Out Cleaning service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Moving Out Cleaning service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
-                                    height="3420">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
+                                    height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1304,8 +1327,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Post-Reno Cleaning Service .webp">
                                 <img src="assets/images/HOME PAGE/Home page - Post-Reno Cleaning Service .webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
-                                    height="3420">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
+                                    height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1316,8 +1339,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Spring Cleaning Service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Spring Cleaning Service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
-                                    height="3420">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
+                                    height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1328,8 +1351,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Steam Cleaning Services.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Steam Cleaning Services.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
-                                    height="3420">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
+                                    height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1340,8 +1363,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Weekly Cleaning Service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Weekly Cleaning Service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="3000"
-                                    height="3420">
+                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
+                                    height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1350,10 +1373,204 @@
         </section>
         <!-- testimonial-style-three end -->
 
+
+        <section class="testimonial-style-three tris sec-pad">
+            <div class="auto-container">
+
+                <div class="before-after-wrapper">
+
+                    <!-- Sidebar kiri -->
+                    <div class="side-banner">
+                        SLIDE FOR REAL RESULTS!
+                    </div>
+
+                    <!-- Slider -->
+                    <div class="before-after-container">
+                        <img src="assets/images/SINK-BEFORE-CLEANING.webp" alt="Before cleaning" class="before-img">
+                        <img src="assets/images/SINK-AFTER-CLEANING.webp" alt="After cleaning" class="after-img">
+                        <div class="handle">⇔</div>
+                        <div class="label before">BEFORE</div>
+                        <div class="label after">AFTER</div>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <!--<div class="slider-footer">-->
+                <!--  <em>slide for transformation!</em>-->
+                <!--</div>-->
+
+            </div>
+        </section>
+
+        <style>
+            .before-after-wrapper {
+                display: flex;
+                align-items: stretch;
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            /* Sidebar kiri */
+            .side-banner {
+                background-color: #8a726c;
+                color: white;
+                font-size: 34px;
+                font-weight: 900;
+                text-transform: uppercase;
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                min-width: 80px;
+            }
+
+            .before-after-container {
+                position: relative;
+                flex: 1;
+                aspect-ratio: 16/9;
+                overflow: hidden;
+                /*border-radius: 12px;*/
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                user-select: none;
+            }
+
+            .before-after-container,
+            .before-after-container * {
+                user-select: none !important;
+                -webkit-user-drag: none !important;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .before-after-container img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                pointer-events: none;
+            }
+
+            .before-after-container .after-img {
+                clip-path: inset(0 0 0 50%);
+                transition: clip-path 0.1s linear;
+            }
+
+            .before-after-container .handle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 3;
+                background: #f06224;
+                color: #fff;
+                font-size: 18px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                cursor: grab;
+                user-select: none;
+                touch-action: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+
+            .before-after-container .handle:active {
+                cursor: grabbing;
+            }
+
+            /* Label before/after */
+            .label {
+                position: absolute;
+                bottom: 20px;
+                background: #f06224;
+                color: white;
+                padding: 6px 14px;
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+
+            .label.before {
+                left: 20px;
+            }
+
+            .label.after {
+                right: 20px;
+            }
+
+            /* Footer */
+            .slider-footer {
+                margin-top: 0;
+                background-color: #ff7a00;
+                color: white;
+                font-size: 22px;
+                text-align: center;
+                padding: 18px;
+            }
+        </style>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const container = document.querySelector('.before-after-container');
+                const afterImg = container.querySelector('.after-img');
+                const handle = container.querySelector('.handle');
+
+                let isDragging = false;
+
+                function updateSlider(x) {
+                    const rect = container.getBoundingClientRect();
+                    let posX = Math.min(Math.max(0, x - rect.left), rect.width);
+                    let percent = (posX / rect.width) * 100;
+                    afterImg.style.clipPath = `inset(0 0 0 ${percent}%)`;
+                    handle.style.left = `${percent}%`;
+                }
+
+                function startDrag(e) {
+                    e.preventDefault();
+                    isDragging = true;
+                    document.body.style.userSelect = "none"; // cegah highlight seluruh halaman
+                }
+
+                function stopDrag() {
+                    isDragging = false;
+                    document.body.style.userSelect = "auto";
+                }
+
+                // Mouse
+                handle.addEventListener("mousedown", startDrag);
+                document.addEventListener("mouseup", stopDrag);
+                document.addEventListener("mousemove", e => {
+                    if (isDragging) updateSlider(e.clientX);
+                });
+
+                // Touch
+                handle.addEventListener("touchstart", e => {
+                    startDrag(e);
+                });
+                document.addEventListener("touchend", stopDrag);
+                document.addEventListener("touchmove", e => {
+                    if (isDragging) {
+                        e.preventDefault(); // cegah scroll
+                        updateSlider(e.touches[0].clientX);
+                    }
+                });
+
+                // Cegah drag & select default
+                container.addEventListener("dragstart", e => e.preventDefault());
+                container.addEventListener("selectstart", e => e.preventDefault());
+            });
+        </script>
+
         <!-- review-page-section -->
 
-        <section class="review-page-section" style="background: url('assets/images/HOME PAGE/Why choose us background photo.png')  no-repeat center center;
-    background-size: cover;">
+        <section class="review-page-section lazy-bg"
+            data-bg="assets/images/HOME PAGE/Why choose us background photo.webp">
             <div class="auto-container">
                 <div class="sec-title text-left"><br>
                     <h2><label style="color:#f9f39c;">WHY CHOOSE US</label></h2>
@@ -1427,6 +1644,28 @@
                 </div>
             </div>
         </section>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const lazyBg = document.querySelectorAll(".lazy-bg");
+                const observer = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const section = entry.target;
+                            const bg = section.getAttribute("data-bg");
+                            if (bg) {
+                                section.style.background = `url('${bg}') no-repeat center center`;
+                                section.style.backgroundSize = "cover";
+                                section.removeAttribute("data-bg");
+                            }
+                            obs.unobserve(section);
+                        }
+                    });
+                });
+
+                lazyBg.forEach(sec => observer.observe(sec));
+            });
+        </script>
         <!-- review-page-section end -->
 
         <!-- contact-section -->
@@ -1550,7 +1789,9 @@
                         <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget logo-widget">
                                 <figure class="footer-logo"><a href="index.html"><img
-                                            src="assets/images/footer-logo.png" alt="logo"></a></figure>
+                                            src="assets/images/footer-logo.webp" alt="Footer logo" width="500"
+                                            height="275" loading="lazy" decoding="async">
+                                    </a></figure>
                                 <div class="text text-center">
                                     <p>HSE is dedicated to easing the burden of household chores amidst your busy daily
                                         lives at home. Trust us to provide you with the best cleaning solutions and
