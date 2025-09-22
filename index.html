@@ -64,6 +64,13 @@
         assets/images/HOME PAGE/clean-space-happy-face-home-page-1400.avif 1400w,
         assets/images/HOME PAGE/clean-space-happy-face-home-page-1920.avif 1920w"
         imagesizes="(max-width: 768px) 100vw, 1400px">
+    <link rel="preload" as="image" href="assets/images/HOME PAGE/clean-space-happy-face-home-page-1920.webp"
+        type="image/webp" imagesrcset="
+         assets/images/HOME PAGE/clean-space-happy-face-home-page-800.webp 800w,
+         assets/images/HOME PAGE/clean-space-happy-face-home-page-1400.webp 1400w,
+         assets/images/HOME PAGE/clean-space-happy-face-home-page-1920.webp 1920w"
+        imagesizes="(max-width: 768px) 100vw, (max-width: 1400px) 90vw, 1400px">
+
     <!-- Google Fonts (swap agar tidak blocking) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Lato&family=Montserrat:wght@700&display=swap"
         rel="stylesheet">
@@ -649,12 +656,12 @@
         <style>
             .image-wrapper {
                 position: relative;
-                display: inline-block;
+                display: block;
                 width: 100%;
             }
 
             .button-on-image {
-                font-size: xx-large;
+                font-size: 1.5rem;
                 position: absolute;
                 bottom: 13%;
                 left: 16%;
@@ -663,16 +670,17 @@
                 padding: 13px 30px;
                 border: none;
                 border-radius: 20px;
-                font-weight: bolder;
+                font-weight: 700;
+                cursor: pointer;
+                transition: all 0.4s ease;
             }
 
             .button-on-image:hover {
                 background-color: #8a726c;
-                color: white;
+                color: #fff;
                 text-transform: uppercase;
-                transition: all 500ms ease;
+                transform: scale(1.05);
             }
-
 
             .visually-hidden {
                 position: absolute;
@@ -689,6 +697,7 @@
 
         <!-- ===================== Desktop ===================== -->
         <div class="image-wrapper d-only">
+            <!-- SEO Heading -->
             <h1 class="visually-hidden">
                 Professional Home Cleaning Services in Singapore
             </h1>
@@ -700,26 +709,26 @@
             <picture>
                 <!-- AVIF -->
                 <source srcset="
-            assets/images/HOME PAGE/clean-space-happy-face-home-page-800.avif 800w,
-            assets/images/HOME PAGE/clean-space-happy-face-home-page-1400.avif 1400w,
-            assets/images/HOME PAGE/clean-space-happy-face-home-page-1920.avif 1920w" type="image/avif"
-                    sizes="(max-width: 768px) 100vw, 1400px">
+                assets/images/HOME PAGE/clean-space-happy-face-home-page-800.avif 800w,
+                assets/images/HOME PAGE/clean-space-happy-face-home-page-1400.avif 1400w,
+                assets/images/HOME PAGE/clean-space-happy-face-home-page-1920.avif 1920w" type="image/avif"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1400px) 90vw, 1400px">
 
-                <!-- WebP fallback -->
+                <!-- WebP -->
                 <source srcset="
-            assets/images/HOME PAGE/clean-space-happy-face-home-page-800.webp 800w,
-            assets/images/HOME PAGE/clean-space-happy-face-home-page-1400.webp 1400w,
-            assets/images/HOME PAGE/clean-space-happy-face-home-page-1920.webp 1920w" type="image/webp"
-                    sizes="(max-width: 768px) 100vw, 1400px">
+                assets/images/HOME PAGE/clean-space-happy-face-home-page-800.webp 800w,
+                assets/images/HOME PAGE/clean-space-happy-face-home-page-1400.webp 1400w,
+                assets/images/HOME PAGE/clean-space-happy-face-home-page-1920.webp 1920w" type="image/webp"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1400px) 90vw, 1400px">
 
-                <!-- Fallback PNG -->
-                <img src="assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design).webp"
+                <!-- JPEG Fallback -->
+                <img src="assets/images/HOME PAGE/Clean Space Happy Face home page image (without button design).jpg"
                     alt="Happy family smiling after professional home cleaning in Singapore" loading="eager"
                     width="1920" height="1080" decoding="async" fetchpriority="high"
                     style="max-width:100%;height:auto;">
             </picture>
 
-            <button class="button-on-image" onclick="openPopups()">
+            <button class="button-on-image" onclick="openPopups()" aria-label="Request a fast cleaning quote now">
                 REQUEST FOR FAST QUOTE NOW
             </button>
         </div>
@@ -1189,20 +1198,6 @@
                 </style>
                 <div class="promo-banner-slider swiper-container" style="margin-top: 40px;overflow: hidden;">
                     <div class="swiper-wrapper">
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide">
-                            <a href="https://www.instagram.com/reel/DMzFgulydgV/?igsh=MXQzNXBiNnZhN2VnNg=="
-                                target="_blank" rel="noopener noreferrer">
-                                <picture>
-                                    <!-- versi modern WebP -->
-                                    <source type="image/webp" srcset="assets/images/special promo sg60 banner.webp">
-                                    <!-- fallback PNG -->
-                                    <img src="assets/images/special promo sg60 banner.webp" alt="SG60 Promo"
-                                        class="img-fluid" style="width: 100%; border-radius: 10px;" loading="lazy"
-                                        width="1920" height="1080">
-                                </picture>
-                            </a>
-                        </div>
 
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
