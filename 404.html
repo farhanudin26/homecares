@@ -86,6 +86,12 @@
       line-height: 1.6;
     }
 
+    .countdown {
+      font-weight: 700;
+      color: #e63946;
+      font-size: 22px;
+    }
+
     a {
       display: inline-block;
       margin-top: 25px;
@@ -113,8 +119,24 @@
     <div class="emoji">😕</div>
     <h1>404</h1>
     <p>Oops! The page you’re looking for doesn’t exist or has been moved.</p>
+    <p>You will be redirected to <strong>Home</strong> in 
+       <span class="countdown" id="countdown">6</span> seconds.</p>
     <a href="https://homecares.sg/">⬅ Back to Home</a>
   </div>
+
+  <script>
+    let seconds = 6;
+    const countdownEl = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+      seconds--;
+      countdownEl.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = "https://homecares.sg/";
+      }
+    }, 1000);
+  </script>
 </body>
 
 </html>
