@@ -904,8 +904,6 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </section>
@@ -1276,8 +1274,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - baby room cleaning service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - baby room cleaning service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
-                                    height="1080">
+                                    alt="Household Service Elite - Nursery Room Cleaning Service in Singapore"
+                                    style="max-width: 100%; height: auto;" loading="lazy" width="1920" height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1288,8 +1286,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Deep Cleaning Service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Deep Cleaning Service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
-                                    height="1080">
+                                    alt="Household Service Elite - Deep Cleaning Service for Homes in Singapore"
+                                    style="max-width: 100%; height: auto;" loading="lazy" width="1920" height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1300,8 +1298,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - HIP Programme Service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - HIP Programme Service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
-                                    height="1080">
+                                    alt="Household Service Elite - HIP Programme Cleaning Services"
+                                    style="max-width: 100%; height: auto;" loading="lazy" width="1920" height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1312,8 +1310,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Moving Out Cleaning service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Moving Out Cleaning service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
-                                    height="1080">
+                                    alt="Household Service Elite - Moving Out Cleaning Service in Singapore"
+                                    style="max-width: 100%; height: auto;" loading="lazy" width="1920" height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1324,8 +1322,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Post-Reno Cleaning Service .webp">
                                 <img src="assets/images/HOME PAGE/Home page - Post-Reno Cleaning Service .webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
-                                    height="1080">
+                                    alt="Household Service Elite - Post Renovation Cleaning Service"
+                                    style="max-width: 100%; height: auto;" loading="lazy" width="1920" height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1336,8 +1334,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Spring Cleaning Service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Spring Cleaning Service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
-                                    height="1080">
+                                    alt="Household Service Elite - Spring Cleaning Service for Homes"
+                                    style="max-width: 100%; height: auto;" loading="lazy" width="1920" height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1348,8 +1346,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Steam Cleaning Services.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Steam Cleaning Services.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
-                                    height="1080">
+                                    alt="Household Service Elite - Steam Cleaning Services for Mattresses and Sofas"
+                                    style="max-width: 100%; height: auto;" loading="lazy" width="1920" height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1360,8 +1358,8 @@
                                 <source type="image/webp"
                                     srcset="assets/images/HOME PAGE/Home page - Weekly Cleaning Service.webp">
                                 <img src="assets/images/HOME PAGE/Home page - Weekly Cleaning Service.webp"
-                                    alt="Happy Face" style="max-width: 100%; height: auto;" loading="lazy" width="1920"
-                                    height="1080">
+                                    alt="Household Service Elite - Weekly Cleaning Service for Regular Home Maintenance"
+                                    style="max-width: 100%; height: auto;" loading="lazy" width="1920" height="1080">
                             </picture>
                         </a>
                     </div>
@@ -1454,8 +1452,18 @@
 
             .before-after-container .after-img {
                 clip-path: inset(0 0 0 50%);
-                transition: clip-path 0.1s linear;
+                transition: clip-path 0.25s ease-out;
+                /* lebih lembut */
+                will-change: clip-path;
+                /* optimasi performa GPU */
             }
+
+            .before-after-container .handle {
+                transition: left 0.25s ease-out;
+                /* biar gerak handle smooth juga */
+                will-change: left;
+            }
+
 
             .before-after-container .handle {
                 position: absolute;
@@ -1519,19 +1527,28 @@
                 const handle = container.querySelector('.handle');
 
                 let isDragging = false;
+                let currentPercent = 50; // posisi awal
+                let targetPercent = 50;
 
                 function updateSlider(x) {
                     const rect = container.getBoundingClientRect();
                     let posX = Math.min(Math.max(0, x - rect.left), rect.width);
-                    let percent = (posX / rect.width) * 100;
-                    afterImg.style.clipPath = `inset(0 0 0 ${percent}%)`;
-                    handle.style.left = `${percent}%`;
+                    targetPercent = (posX / rect.width) * 100;
                 }
+
+                // Gunakan animasi halus (requestAnimationFrame)
+                function animate() {
+                    currentPercent += (targetPercent - currentPercent) * 0.2; // smoothing
+                    afterImg.style.clipPath = `inset(0 0 0 ${currentPercent}%)`;
+                    handle.style.left = `${currentPercent}%`;
+                    requestAnimationFrame(animate);
+                }
+                animate();
 
                 function startDrag(e) {
                     e.preventDefault();
                     isDragging = true;
-                    document.body.style.userSelect = "none"; // cegah highlight seluruh halaman
+                    document.body.style.userSelect = "none";
                 }
 
                 function stopDrag() {
@@ -1547,22 +1564,17 @@
                 });
 
                 // Touch
-                handle.addEventListener("touchstart", e => {
-                    startDrag(e);
-                });
+                handle.addEventListener("touchstart", startDrag);
                 document.addEventListener("touchend", stopDrag);
                 document.addEventListener("touchmove", e => {
                     if (isDragging) {
-                        e.preventDefault(); // cegah scroll
+                        e.preventDefault();
                         updateSlider(e.touches[0].clientX);
                     }
                 });
-
-                // Cegah drag & select default
-                container.addEventListener("dragstart", e => e.preventDefault());
-                container.addEventListener("selectstart", e => e.preventDefault());
             });
         </script>
+
 
         <!-- review-page-section -->
 
